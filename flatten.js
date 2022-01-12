@@ -17,23 +17,22 @@ const assertArraysEqual = function(arr1, arr2) {
 };
 
 const flatten = function(array) {
-  let flattenArray = []
+  let flattenArray = [];
   //loop through array and see if there is another array in it
   for (let index of array) {
     if (Array.isArray(index)) {
       for (let j of index) {
         flattenArray.push(j);
       }
-    }
-    else {
-      flattenArray.push(index)
+    } else {
+      flattenArray.push(index);
     }
   }
   return flattenArray;
-}
+};
 
 
 
 
 
-flatten([1, 2, 3, [4], 5, [6, 7]]);
+console.log(assertArraysEqual([1, 2, 3, 4, 5, 6, 7], flatten([1, 2, 3, [4], 5, [6, 7]])));
