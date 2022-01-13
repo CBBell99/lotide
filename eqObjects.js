@@ -25,10 +25,6 @@ const eqObjects = function(mainObj, diffObj) {
     return false;
   }
   for (let key in mainObj) {
-    //ensures our diffObj contains the same keys as the main object
-    if (!diffObj.hasOwnProperty(key)) {
-      return false;
-    }
     // check if values are arrays
     if (Array.isArray(mainObj[key])) {
       if (Array.isArray(diffObj[key])) {
